@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="form-container">
+
+    <form action="" id="form">
+      <p class="signup" >signup</p>
+
+      <div class="form-wrapper">
+
+        <div class="left-form">
+          <div class="username">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="username" />
+          </div>
+
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email" />
+          </div>
+
+          <div class="age">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="200" placeholder="age" />
+          </div>
+
+          <div class="birth-date">
+            <label for="date">Birth Date</label>
+            <input type="date" id="date" name="birth date" min="1900-01-01" />
+          </div>
+
+          <div class="radio-group">
+            <p>Gender</p>
+            <div class="radio-item">
+              <label for="male">Male</label>
+              <input class="radio" type="radio" id="male" name="gender" value="male" />
+            </div>
+
+            <div class="radio-item">
+              <label for="female">Female</label>
+              <input class="radio" type="radio" id="female" name="gender" value="female" />
+            </div>
+          </div>
+
+          <div class="phone-number">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Tell" />
+          </div>
+
+          <div class="country">
+            <label for="country">Select Your Country</label>
+            <select id="country" name="country">
+              <option value="">--Select a country--</option>
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <option value="Japan">Japan</option>
+              <option value="china">China</option>
+              <option value="spain">Spain</option>
+              <option value="france">France</option>
+              <option value="germany">Germany</option>
+              <option value="netherland">Netherland</option>
+
+              <option value="algeria">Algeria</option>
+              <option value="angola">Angola</option>
+              <option value="benin">Benin</option>
+              <option value="botswana">Botswana</option>
+              <option value="burkina_faso">Burkina Faso</option>
+              <option value="burundi">Burundi</option>
+              <option value="cape_verde">Cape Verde</option>
+              <option value="cameroon">Cameroon</option>
+              <option value="central_african_republic"> Central African Republic </option>
+              <option value="chad">Chad</option>
+              <option value="comoros">Comoros</option>
+              <option value="congo_brazzaville">Congo (Brazzaville)</option>
+              <option value="congo_kinshasa">Congo (Kinshasa)</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="egypt">Egypt</option>
+              <option value="equatorial_guinea">Equatorial Guinea</option>
+              <option value="eritrea">Eritrea</option>
+              <option value="eswatini">Eswatini</option>
+              <option value="ethiopia">Ethiopia</option>
+              <option value="gabon">Gabon</option>
+              <option value="gambia">Gambia</option>
+              <option value="ghana">Ghana</option>
+              <option value="guinea">Guinea</option>
+              <option value="guinea_bissau">Guinea-Bissau</option>
+              <option value="ivory_coast">Ivory Coast</option>
+              <option value="kenya">Kenya</option>
+              <option value="lesotho">Lesotho</option>
+              <option value="liberia">Liberia</option>
+              <option value="libya">Libya</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="malawi">Malawi</option>
+              <option value="mali">Mali</option>
+              <option value="mauritania">Mauritania</option>
+              <option value="mauritius">Mauritius</option>
+              <option value="morocco">Morocco</option>
+              <option value="mozambique">Mozambique</option>
+              <option value="namibia">Namibia</option>
+              <option value="niger">Niger</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="sao_tome_and_principe"> São Tomé and Príncipe</option>
+              <option value="senegal">Senegal</option>
+              <option value="seychelles">Seychelles</option>
+              <option value="sierra_leone">Sierra Leone</option>
+              <option value="somalia">Somalia</option>
+              <option value="south_africa">South Africa</option>
+              <option value="south_sudan">South Sudan</option>
+              <option value="sudan">Sudan</option>
+              <option value="tanzania">Tanzania</option>
+              <option value="togo">Togo</option>
+              <option value="tunisia">Tunisia</option>
+              <option value="uganda">Uganda</option>
+              <option value="zambia">Zambia</option>
+              <option value="zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+          
+          <div class="color">
+            <label for="color">Favourite Colour</label>
+            <input type="color" id="color" name="color" />
+          </div>
+
+        </div>
+
+        <div class="right-form">
+          <div class="radio-group">
+            <p>What is Your Level of Education?</p>
+
+            <div class="radio-item">
+              <label for="highschool">High School</label>
+              <input class="radio" id="highschool" name="education" value="highschool" type="radio" />
+            </div>
+
+            <div class="radio-item">
+              <label for="diploma">Diploma</label>
+              <input class="radio" type="radio" id="diploma" name="education" value="diploma" />
+            </div>
+
+            <div class="radio-item">
+              <label for="bachelor">Bachelor's Degree</label>
+              <input class="radio" type="radio" id="bachelor" name="education" value="bachelor" />
+            </div>
+
+            <div class="radio-item">
+              <label for="master">Master's Degree</label>
+              <input class="radio" type="radio" id="master" name="education" value="master" />
+            </div>
+
+            <div class="radio-item">
+              <label for="phd">Ph.D.</label>
+              <input class="radio" type="radio" id="phd" name="education" value="phd" />
+            </div>
+
+            <div class="radio-item">
+              <label for="other">Other</label>
+              <input class="radio" type="radio" id="other" name="education" value="other" />
+            </div>
+          </div>
+
+          <div class="check-group">
+            <p>Select Your Favorite Seasons in Nigeria</p>
+            <div class="check-item">
+              <label for="dry">Dry Season</label>
+              <input class="checkbox" type="checkbox" id="dry" name="season" value="dry" />
+            </div>
+            <div class="check-item">
+              <label for="wet">Wet (Rainy)</label>
+              <input class="checkbox" type="checkbox" id="wet" name="season" value="wet" />
+            </div>
+            <div class="check-item">
+              <label for="harmattan">Harmattan</label>
+              <input class="checkbox" type="checkbox" id="harmattan" name="season" value="harmattan" />
+            </div>
+          </div>
+
+          <div class="bio">
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" placeholder="Tell us about you"></textarea>
+          </div>
+
+          <div class="resume">
+            <label for="resume">Resume</label>
+            <input type="file" name="resume" id="resume" />
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="reset" type="reset">Reset</button>
+        <button class="submit" type="submit">Signup</button>
+      </div>
+      <p class="login" >Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+
+</html>
