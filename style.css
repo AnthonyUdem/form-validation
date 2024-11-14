@@ -5,10 +5,14 @@
 }
 
 :root {
-    --hover: #336B87;
+    --red: rgb(131, 10, 10);
+    --green: green;
+    --black: black;
+    --white: white;
+    --grey: grey;
     --shadow: #2A3132;
-    --caption: #763626;
-    --background: #90AFC5;
+    --signupColor: rgb(19, 51, 19);
+    --signupColorDim: rgb(19, 51, 19, .5)
 }
 
 html {
@@ -17,7 +21,6 @@ html {
 }
 
 body {
-    /* height: 100vh; */
     height: max-content;
     background-image: url(./image/pexels.jpg);
     background-size: cover;
@@ -26,6 +29,10 @@ body {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 body::before {
@@ -35,46 +42,55 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
 
+span {
+    color: var(--red);
+    margin-left: .2rem;
+}
 
-.signup{
+
+.page-name {
     position: relative;
     text-transform: capitalize;
     font-weight: bold;
-    color: rgb(19, 51, 19);
-    margin-bottom: 1rem;
+    color: var(--signupColor);
     font-size: 3rem;
     letter-spacing: .3rem;
-    text-shadow: .1rem .1rem .3rem black;
+    text-shadow: .1rem .1rem .3rem var(--black);
 }
 
-.signup::before{
+.page-name::before {
     content: "";
     position: absolute;
     width: 2rem;
     height: .15rem;
-    background-color: rgba(241, 40, 9, 0.822);
+    background-color: var(--red);
     bottom: -1.1rem;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     animation: animate 4s linear infinite
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         width: 9rem;
     }
 
-    50%{
+    50% {
         width: 19rem;
     }
 
-    100%{
+    100% {
         width: 9rem;
     }
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--signupColorDim);
 }
 
 
@@ -87,12 +103,13 @@ button {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
-    color: rgb(51, 66, 51);
+    color: var(--signupColor);
     padding: .8rem 1.5rem;
     border-radius: 40px;
-    background-color:white;
+    background-color: white;
     transition: all .2s ease;
-    border: 1px solid var(--shadow);
+    border: 1.5px solid var(--shadow);
+    box-shadow: .1rem 0rem .4rem var(--black);
 }
 
 button:hover {
@@ -101,7 +118,7 @@ button:hover {
 }
 
 .reset {
-    color: rgb(234, 11, 11);
+    color: var(--red);
 }
 
 .login,
@@ -110,6 +127,7 @@ a {
     font-size: 1.5rem;
     padding: 1rem;
     text-decoration: none;
+    text-shadow: 1px 1px 1px var(--grey);
 }
 
 a:hover {
@@ -122,10 +140,10 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem;
     align-items: center;
     border-radius: .8rem;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .6);
 }
 
 form {
@@ -150,7 +168,7 @@ form {
     display: flex;
     flex-direction: column;
     padding: .5rem;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .left-form>div,
@@ -158,23 +176,28 @@ form {
     padding: .5rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    border: var(--shadow) 1px solid;
-    /* border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0; */
+    gap: 1.2rem;
+    border: var(--shadow) .5px solid;
+    box-shadow: .01rem .01rem .8rem var(--grey);
+
 }
 
 label {
     font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#resume,
+#color {
+    border: none;
 }
 
 input {
     font-size: 1.2rem;
     padding: .5rem 1rem;
-    border: solid var(--shadow) 1px;
+    border: solid var(--shadow) 3px;
     background-color: transparent;
+    outline: none;
     border-left: 0;
     border-top: 0;
     border-right: 0;
@@ -196,6 +219,7 @@ input {
 .right-form>.radio-group p,
 .check-group p {
     margin: .5rem 0rem 1.5rem 0rem;
+    color: rgb(7, 7, 67);
 }
 
 .radio-item,
@@ -271,8 +295,64 @@ input {
 }
 
 
+/* javascipt styling */
+
+#error-message {
+    font-size: 1.2rem;
+    color: var(--red);
+    position: sticky;
+    top: 0;
+    transition: all .2s ease;
+    line-height: 1.6;
+    font-family: cursive;
+}
+
+#file-error {
+    color: var(--red);
+    display: none;
+    font-size: 1.2rem;
+}
+
+.form-wrapper div.incorrect label {
+    color: var(--red);
+}
+
+.form-wrapper div.incorrect input {
+    border: 2px solid var(--red);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
 
 
+/* email animation effect */
+.email-group {
+    position: relative;
+}
+
+#email {
+    position: relative;
+    z-index: 10;
+}
+
+#email-label {
+    transition: bottom ease-out .3s;
+}
+
+#email-error {
+    position: absolute;
+    top: 100%;
+    left: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--red);
+    transition: top ease-in-out .5s;
+    font-family: cursive;
+}
+
+.copyright {
+    padding: 1rem;
+    text-align: center;
+}
 
 
 
@@ -286,7 +366,6 @@ input {
 @media (max-width: 1200px) {
     .form-wrapper {
         width: 80%;
-        /* background-color: rgb(77, 93, 63); */
     }
 
     .radio-item {
@@ -302,7 +381,6 @@ input {
 
     .form-wrapper {
         width: 90%;
-        /* background-color: rgb(128, 90, 0); */
     }
 }
 
@@ -314,13 +392,12 @@ input {
     }
 
     .form-container {
-        margin: 5vh 0 5vh 0;
+        margin: 2vh 0 5vh 0;
     }
 
     .form-wrapper {
         width: 60vw;
         flex-direction: column;
-        /* background-color: green; */
     }
 
     .left-form,
@@ -340,19 +417,19 @@ input {
         font-size: 95%;
     }
 
-    .form-container {
-        margin: 5vh 0 5vh 0;
-    }
-
     .form-wrapper {
-        /* background-color: rgb(24, 35, 76); */
         width: 70vw;
     }
 
     .radio-item {
         width: 100%;
     }
+
+    #email-error {
+        font-size: 1rem;
+    }
 }
+
 
 /* Styles for the smallest phones */
 @media (max-width: 320px) {
@@ -362,10 +439,19 @@ input {
 
     .form-wrapper {
         width: 85%;
-        /* background-color: rgb(115, 14, 53); */
     }
 
     .radio-item {
         width: 100%;
+    }
+
+    .login,
+    a {
+        font-size: 1.2rem;
+    }
+
+    #email-error {
+        left: .2rem;
+        font-size: 1rem;
     }
 }

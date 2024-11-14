@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background-image: url(./image/pexels-olly-3.jpg);
+        }
+
+        body::before {
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        #error-message {
+            color: red;
+        }
+
+        .form-container {
+            margin: 10vh 0 5vh 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .left-form>div,
+        .right-form>div {
+            border: var(--grey) .05px solid;
+            box-shadow: .01rem 0rem 2rem var(--black);
+        }
+
+        input {
+            border: solid grey 3px;
+            color: white;
+            font-size: 1.2rem;
+            padding: .5rem 1rem;
+            background-color: transparent;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+        }
+
+        .page-name {
+            color: white;
+            text-shadow: .1rem .1rem .5rem black;
+        }
+
+        .page-name::before {
+            background-color: green;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: grey;
+        }
+
+        label {
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        button {
+            background-color: transparent;
+            color: white;
+            box-shadow: .1rem 0rem .5rem var(--grey);
+        }
+
+        .reset {
+            color: red;
+        }
+
+        button:hover {
+            background-color: var(--black);
+        }
+
+        .login {
+            color: white;
+            text-shadow: 1px 1px 2px var(--black);
+        }
+
+        .login>a {
+            color: rgba(255, 255, 255, 0.674);
+            text-shadow: none;
+        }
+
+        #email-error {
+            color: red;
+        }
+
+        .form-wrapper div.incorrect label {
+            color: red;
+        }
+
+        .form-wrapper div.incorrect input {
+            border: 2px solid red;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="form-container">
+
+        <form action="./results.html" id="form">
+            <p class="page-name">LOGIN</p>
+            <p id="error-message"></p>
+
+            <div class="form-wrapper">
+                <div class="left-form">
+
+                    <div class="email-group">
+                        <label id="email-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" spellcheck="false" onkeyup="validateEmail()"
+                            placeholder="email" />
+                        <span id="email-error"></span>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="password">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="button-container">
+                <button class="reset" type="reset">Reset</button>
+                <button class="submit" type="submit">Login</button>
+            </div>
+
+            <p class="login">New here?<a href="index.html">Create an Account</a></p>
+        </form>
+    </div>
+    <p class="copyright">Copyright &copy; 2024 Anthony Chidiebere Udem. All Rights Reserved.</p>
+</body>
+
+</html>

@@ -6,40 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign up</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+
 </head>
 
 <body>
   <div class="form-container">
 
-    <form action="" id="form">
-      <p class="signup" >signup</p>
+
+    <form action="./results.html" id="form" method="GET" enctype="multipart/form-data">
+      <p class="page-name">signup</p>
+      <p id="error-message"></p>
 
       <div class="form-wrapper">
 
         <div class="left-form">
-          <div class="username">
-            <label for="username">Username</label>
+          <div>
+            <label for="username">Username <span>*</span></label>
             <input type="text" id="username" name="username" placeholder="username" />
           </div>
 
-          <div class="email">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email" />
+          <div class="email-group">
+            <label id="email-label" for="email">Email<span>*</span></label>
+            <input type="email" id="email" name="email" spellcheck="false" onkeyup="validateEmail()"
+              placeholder="email" />
+            <span id="email-error"></span>
           </div>
 
           <div class="age">
-            <label for="age">Age</label>
+            <label for="age">Age <span>*</span></label>
             <input type="number" id="age" name="age" min="1" max="200" placeholder="age" />
           </div>
 
           <div class="birth-date">
-            <label for="date">Birth Date</label>
-            <input type="date" id="date" name="birth date" min="1900-01-01" />
+            <label for="date">Birth Date <span>*</span></label>
+            <input type="date" id="date" name="birth-date" min="1900-01-01" />
           </div>
 
           <div class="radio-group">
-            <p>Gender</p>
+            <p>Gender<span>*</span></p>
             <div class="radio-item">
               <label for="male">Male</label>
               <input class="radio" type="radio" id="male" name="gender" value="male" />
@@ -52,12 +57,12 @@
           </div>
 
           <div class="phone-number">
-            <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="Tell" />
+            <label for="phone-number">Phone Number<span>*</span></label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Tel" />
           </div>
 
           <div class="country">
-            <label for="country">Select Your Country</label>
+            <label for="country">Select Your Country<span>*</span></label>
             <select id="country" name="country">
               <option value="">--Select a country--</option>
               <option value="usa">United States</option>
@@ -126,10 +131,15 @@
               <option value="zimbabwe">Zimbabwe</option>
             </select>
           </div>
-          
-          <div class="color">
-            <label for="color">Favourite Colour</label>
-            <input type="color" id="color" name="color" />
+
+          <div>
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" name="password" placeholder="password">
+          </div>
+
+          <div>
+            <label for="repeat-password">Repeat Password <span>*</span></label>
+            <input type="password" id="repeat-password" name="repeat-password" placeholder="password">
           </div>
 
         </div>
@@ -173,37 +183,52 @@
             <p>Select Your Favorite Seasons in Nigeria</p>
             <div class="check-item">
               <label for="dry">Dry Season</label>
-              <input class="checkbox" type="checkbox" id="dry" name="season" value="dry" />
+              <input class="checkbox" type="checkbox" id="dry" name="dry-season" />
             </div>
             <div class="check-item">
               <label for="wet">Wet (Rainy)</label>
-              <input class="checkbox" type="checkbox" id="wet" name="season" value="wet" />
+              <input class="checkbox" type="checkbox" id="wet" name="wet-season" />
             </div>
             <div class="check-item">
               <label for="harmattan">Harmattan</label>
-              <input class="checkbox" type="checkbox" id="harmattan" name="season" value="harmattan" />
+              <input class="checkbox" type="checkbox" id="harmattan" name="harmattan-season" />
             </div>
           </div>
 
           <div class="bio">
-            <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" placeholder="Tell us about you"></textarea>
+            <label for="bio-info">Bio<span> ~ max: 100 words</span></label>
+            <textarea name="bio" id="bio-info" placeholder="Tell us about you"></textarea>
+            <p id="word-count">Words: 0 / 100</p>
+          </div>
+
+          <div class="url">
+            <label for="url">LinkedIn URL</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com">
           </div>
 
           <div class="resume">
-            <label for="resume">Resume</label>
+            <label for="resume">Resume<span> ~ Max: 2MB</span></label>
             <input type="file" name="resume" id="resume" />
+            <p id="file-error">File size exceeds 2MB limit!</p>
+          </div>
+
+          <div class="color">
+            <label for="color">What's your favorite color?<span> ~ We'll use it to personalize your
+                experience</span></label>
+            <input type="color" id="color" name="color" value="#ffffff" />
           </div>
         </div>
       </div>
 
       <div class="button-container">
         <button class="reset" type="reset">Reset</button>
-        <button class="submit" type="submit">Signup</button>
+        <button class="submit" type="submit">Sign up</button>
       </div>
-      <p class="login" >Already have an account? <a href="login.html">Login</a></p>
+      <p class="login">Already have an account?<a href="login.html">Login</a></p>
     </form>
   </div>
+  <p class="copyright">Copyright &copy; 2024 Anthony Chidiebere Udem.   All Rights Reserved.</p>
+
 </body>
 
 </html>

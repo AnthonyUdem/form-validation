@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            font-size: 1rem;
+            font-weight: 400;
+            overflow: hidden;
+        }
+        #results {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+            justify-self: center;
+        }
+
+        a{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="results"></div>
+    <a href="index.html">Back to form</a>
+
+    <script>
+        const resultsList = document.getElementById('results');
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append(`${name} : ${value}`)
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+    
+</body>
+</html> 
