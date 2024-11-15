@@ -11,7 +11,7 @@
     --white: white;
     --grey: grey;
     --shadow: #2A3132;
-    --signupColor: rgb(19, 51, 19);
+    --signupColor: green;
     --signupColorDim: rgb(19, 51, 19, .5)
 }
 
@@ -127,7 +127,6 @@ a {
     font-size: 1.5rem;
     padding: 1rem;
     text-decoration: none;
-    text-shadow: 1px 1px 1px var(--grey);
 }
 
 a:hover {
@@ -178,13 +177,14 @@ form {
     flex-direction: column;
     gap: 1.2rem;
     border: var(--shadow) .5px solid;
-    box-shadow: .01rem .01rem .8rem var(--grey);
+    box-shadow: .01rem .01rem .5rem var(--black);
 
 }
 
 label {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 550;
+    margin: 1rem 0rem;
 }
 
 #resume,
@@ -298,13 +298,12 @@ input {
 /* javascipt styling */
 
 #error-message {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--red);
     position: sticky;
     top: 0;
     transition: all .2s ease;
     line-height: 1.6;
-    font-family: cursive;
 }
 
 #file-error {
@@ -343,15 +342,15 @@ input {
     position: absolute;
     top: 100%;
     left: 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--red);
     transition: top ease-in-out .5s;
-    font-family: cursive;
 }
 
 .copyright {
     padding: 1rem;
     text-align: center;
+    color: var(--grey);
 }
 
 
@@ -452,6 +451,6 @@ input {
 
     #email-error {
         left: .2rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

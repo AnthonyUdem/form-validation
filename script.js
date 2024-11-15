@@ -75,7 +75,6 @@ form?.addEventListener("submit", function (e) {
     if (errors.length > 0) {
         e.preventDefault(); // Stop form submission
         error_message.innerText = errors.join(',  ');
-        // error_message.style.backgroundColor = "grey";
         error_message.style.display = "block";
     } else {
         error_message.style.display = "none";
