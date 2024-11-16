@@ -14,13 +14,11 @@
 <body>
   <div class="form-container">
 
-
     <form action="./results.html" id="form" method="GET" enctype="multipart/form-data">
       <p class="page-name">signup</p>
       <p id="error-message"></p>
 
       <div class="form-wrapper">
-
         <div class="left-form">
           <div>
             <label for="username">Username <span>*</span></label>
@@ -33,12 +31,13 @@
               placeholder="email" />
             <span id="email-error"></span>
           </div>
+
           <div>
             <label for="password">Password<span>*</span></label>
-            <input type="password" id="password" name="password" placeholder="password">
-            <button type="button" id="toggle-password" onclick="togglePasswordVisibility()">
-              <i class="fas fa-eye"></i>
-            </button>          
+              <input type="password" id="password" name="password" placeholder="password">
+              <button type="button" id="toggle-password" onclick="togglePasswordVisibility()">
+                <i class="fas fa-eye"></i>
+              </button>           
           </div>
 
           <div>
@@ -133,7 +132,20 @@
               <option value="zimbabwe">Zimbabwe</option>
             </select>
           </div>
+          
+          <div class="phone-number">
+            <label for="phone-number">Phone Number<span>*</span></label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Tel"/>
+          </div>
 
+          <div class="url">
+            <label for="url">LinkedIn URL</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com">
+          </div>
+
+        </div>
+
+        <div class="right-form">
           <div class="check-group">
             <p>What's your favourite working season</p>
             <div class="check-item">
@@ -149,10 +161,7 @@
               <input class="checkbox" type="checkbox" id="harmattan" name="harmattan-season" />
             </div>
           </div>
-
-        </div>
-
-        <div class="right-form">
+          
           <div class="radio-group">
             <p>What is Your Level of Education?</p>
 
@@ -187,31 +196,20 @@
             </div>
           </div>
 
-          <div class="phone-number">
-            <label for="phone-number">Phone Number<span>*</span></label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="Tel" />
-          </div>
-
           <div class="bio">
-            <label for="bio-info">Bio<span> ~ max: 100 words</span></label>
+            <label for="bio-info">Bio<em> ~ max: 100 words</em></label>
             <textarea name="bio" id="bio-info" placeholder="Tell us about you"></textarea>
             <p id="word-count">Words: 0 / 100</p>
           </div>
 
-          <div class="url">
-            <label for="url">LinkedIn URL</label>
-            <input type="url" id="url" name="url" placeholder="https://example.com">
-          </div>
-
           <div class="resume">
-            <label for="resume">CV / Resume<span> ~ Max: 2MB</span></label>
+            <label for="resume">CV / Resume<em> ~ Max: 2MB</em></label>
             <input type="file" name="resume" id="resume" />
             <p id="file-error">File size exceeds 2MB limit!</p>
           </div>
 
           <div class="color">
-            <label for="color">What's your favorite colour?<span> ~ We'll use it to personalize your
-                experience</span></label>
+            <label for="color">What's your favorite colour?<em> ~ We'll use it to personalize your experience</em></label>
             <input type="color" id="color" name="color" value="#ffffff" />
           </div>
 
@@ -221,19 +219,18 @@
             <div id="terms_error-message" class="hide_terms-error" >Please accept the terms and conditions.
             </div>
           </div>
-
         </div>
+
       </div>
 
       <div class="button-container">
         <button  id="reset-button" class="reset" type="reset"  onclick="resetForm()">Reset</button>
         <button class="submit" type="submit">Sign up</button>
       </div>
+
       <p class="login">Already have an account?<a href="login.html">Login</a></p>
     </form>
   </div>
   <p class="copyright">Copyright &copy; 2024 Anthony Chidiebere Udem. All Rights Reserved.</p>
-
 </body>
-
 </html>

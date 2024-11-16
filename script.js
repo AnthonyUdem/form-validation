@@ -22,8 +22,6 @@ const terms_error_message = document.getElementById('terms_error-message')
 const reset = document.getElementById('reset')
 
 
-
-
 // Constants for validations
 const max_words = 100;
 const max_size = 2 * 1024 * 1024; // 2 MB in bytes
@@ -88,7 +86,6 @@ form?.addEventListener("submit", function (e) {
 });
 
 const validateEmail = () => {
-
     if (!email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(( \[[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
         email_error.innerHTML = "Please enter a valid email";
         email.style.borderBottomColor = "red";
@@ -140,34 +137,6 @@ function getSignupFormErrors(username, email, password, comfirm_password) {
         validateEmail()
     }
 
-    // Age validation
-    if (age.value == "") {
-        errors.push("Age is requried")
-        markFieldAsIncorrect("age")
-    }
-
-    // Gender validation
-    if (!male.checked && !female.checked) {
-        errors.push("Your gender is requried")
-        markFieldAsIncorrect("male")
-        markFieldAsIncorrect("female")
-    }
-
-    // phone number validation
-    if (phone_number.value == "") {
-        errors.push("Phone number is requried")
-        markFieldAsIncorrect("phone_number")
-    } else if (phone_number.value.length > 14) {
-        errors.push("Phone number length must not exceed 14")
-        markFieldAsIncorrect("phone_number")
-    }
-
-    // Country validation
-    if (country.value == "") {
-        errors.push("Please select your country")
-        markFieldAsIncorrect("country")
-    }
-
     // Password validation
     if (!password || password.trim() === "") {
         errors.push("Password is required");
@@ -185,6 +154,46 @@ function getSignupFormErrors(username, email, password, comfirm_password) {
         errors.push("Passwords do not match");
         markFieldAsIncorrect("password");
         markFieldAsIncorrect("comfirm-password");
+    }
+
+    // Age validation
+    if (age.value == "") {
+        errors.push("Age is requried")
+        markFieldAsIncorrect("age")
+    }else {
+        age.parentElement.classList.remove("incorrect");
+    }
+
+    // Gender validation
+    if (!male.checked && !female.checked) {
+        errors.push("Your gender is requried")
+        markFieldAsIncorrect("male")
+        markFieldAsIncorrect("female")
+    }else {
+        male.parentElement.classList.remove("incorrect");
+        female.parentElement.classList.remove("incorrect");
+    }
+
+        // Country validation
+    if (country.value == "") {
+        errors.push("Please select your country")
+        markFieldAsIncorrect("country")
+    }else {
+        country.parentElement.classList.remove("incorrect");
+    }
+
+    // phone number validation
+    if (phone_number.value == "") {
+        errors.push("Phone number is requried")
+        markFieldAsIncorrect("phone-number")
+    } else if (phone_number.value.length > 14) {
+        errors.push("Phone number length must not exceed 14")
+        markFieldAsIncorrect("phone-number")
+    } else if (phone_number.value.length < 11) {
+        errors.push("Phone number length must exceed 10")
+        markFieldAsIncorrect("phone-number")
+    }else {
+        phone_number.parentElement.classList.remove("incorrect");
     }
 
     // comfirm terms and condition validation
