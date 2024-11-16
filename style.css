@@ -125,7 +125,7 @@ button:hover {
 .login,
 a {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1rem;
     text-decoration: none;
 }
@@ -184,7 +184,7 @@ form {
 
 label {
     font-size: 1.2rem;
-    font-weight: 550;
+    font-weight: 500;
     margin: 1rem 0rem;
 } 
 
@@ -402,7 +402,7 @@ input {
 @media (max-width: 768px) {
 
     html {
-        font-size: 95%;
+        font-size: 90%;
     }
 
     .form-container {
@@ -427,9 +427,6 @@ input {
 /* Mobile devices (larger phones) */
 @media (max-width: 480px) {
 
-    html {
-        font-size: 95%;
-    }
 
     .form-wrapper {
         width: 70vw;
