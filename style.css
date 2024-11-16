@@ -125,7 +125,7 @@ button:hover {
 .login,
 a {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 1rem;
     text-decoration: none;
 }
@@ -322,6 +322,20 @@ input {
     border-top: 0;
     border-right: 0;
     border-left: 0;
+}
+
+/* password */
+
+#toggle-password {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    color: var(--shadow);
+}
+
+#toggle-password:hover {
+    color: var(--red);
 }
 
 
