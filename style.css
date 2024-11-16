@@ -49,6 +49,7 @@ span {
     color: var(--red);
     margin-left: .2rem;
 }
+
 em {
     color: darkblue;
 }
@@ -187,7 +188,7 @@ label {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1rem 0rem;
-} 
+}
 
 #resume,
 #color {
@@ -318,7 +319,7 @@ input {
     color: var(--red);
 }
 
-.form-wrapper div.incorrect input{
+.form-wrapper div.incorrect input {
     border: 2px solid var(--red);
     border-top: 0;
     border-right: 0;
@@ -361,12 +362,12 @@ input {
     transition: top ease-in-out .5s;
 }
 
-.hide_terms-error{
+.hide_terms-error {
     display: none;
 }
 
 .terms-label {
-    color:  rgb(7, 7, 67);
+    color: rgb(7, 7, 67);
 }
 
 #terms-Checkbox {

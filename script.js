@@ -258,7 +258,6 @@ reset?.addEventListener("click", function (e) {
 });
 
 
-
 // Helper function to mark fields with errors
 function markFieldAsIncorrect(fieldId) {
     const field = document.getElementById(fieldId);
@@ -268,7 +267,7 @@ function markFieldAsIncorrect(fieldId) {
 }
 
 // Input change listeners to clear error state
-const allInputs = [username, email, password, comfirm_password].filter(input => input);
+const allInputs = [username, email, password, comfirm_password, age, phone_number, country, male, female].filter(input => input);
 allInputs.forEach(input => {
     input?.addEventListener("input", () => {
         if (input.parentElement.classList.contains("incorrect") && input.value.trim() !== "") {
