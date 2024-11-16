@@ -105,6 +105,7 @@ button {
     font-weight: 600;
     color: var(--signupColor);
     padding: .8rem 1.5rem;
+    margin-top: 2rem;
     border-radius: 40px;
     background-color: white;
     transition: all .2s ease;
@@ -172,7 +173,7 @@ form {
 
 .left-form>div,
 .right-form>div {
-    padding: .5rem;
+    padding: .5rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -185,7 +186,7 @@ label {
     font-size: 1.2rem;
     font-weight: 550;
     margin: 1rem 0rem;
-}
+} 
 
 #resume,
 #color {
@@ -316,7 +317,7 @@ input {
     color: var(--red);
 }
 
-.form-wrapper div.incorrect input {
+.form-wrapper div.incorrect input{
     border: 2px solid var(--red);
     border-top: 0;
     border-right: 0;
@@ -339,12 +340,26 @@ input {
 }
 
 #email-error {
-    position: absolute;
+    /* position: absolute; */
     top: 100%;
     left: 1.2rem;
     font-size: 1.3rem;
     color: var(--red);
     transition: top ease-in-out .5s;
+}
+
+.hide_terms-error{
+    display: none;
+}
+
+.terms-label {
+    color:  rgb(7, 7, 67);
+}
+
+#terms-Checkbox {
+    margin-bottom: 1rem;
+    width: 2rem;
+    height: 3rem;
 }
 
 .copyright {

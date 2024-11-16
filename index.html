@@ -32,15 +32,19 @@
               placeholder="email" />
             <span id="email-error"></span>
           </div>
+          <div>
+            <label for="password">Password<span>*</span></label>
+            <input type="password" id="password" name="password" placeholder="password">
+          </div>
+
+          <div>
+            <label for="comfirm-password">Comfirm Password <span>*</span></label>
+            <input type="password" id="comfirm-password" name="comfirm-password" placeholder="password">
+          </div>
 
           <div class="age">
             <label for="age">Age <span>*</span></label>
-            <input type="number" id="age" name="age" min="1" max="200" placeholder="age" />
-          </div>
-
-          <div class="birth-date">
-            <label for="date">Birth Date <span>*</span></label>
-            <input type="date" id="date" name="birth-date" min="1900-01-01" />
+            <input type="number" id="age" name="age" min="5" max="120" placeholder="age" />
           </div>
 
           <div class="radio-group">
@@ -49,16 +53,10 @@
               <label for="male">Male</label>
               <input class="radio" type="radio" id="male" name="gender" value="male" />
             </div>
-
             <div class="radio-item">
               <label for="female">Female</label>
               <input class="radio" type="radio" id="female" name="gender" value="female" />
             </div>
-          </div>
-
-          <div class="phone-number">
-            <label for="phone-number">Phone Number<span>*</span></label>
-            <input type="tel" id="phone-number" name="phone-number" placeholder="Tel" />
           </div>
 
           <div class="country">
@@ -132,14 +130,20 @@
             </select>
           </div>
 
-          <div>
-            <label for="password">Password<span>*</span></label>
-            <input type="password" id="password" name="password" placeholder="password">
-          </div>
-
-          <div>
-            <label for="repeat-password">Repeat Password <span>*</span></label>
-            <input type="password" id="repeat-password" name="repeat-password" placeholder="password">
+          <div class="check-group">
+            <p>What's your favourite working season</p>
+            <div class="check-item">
+              <label for="dry">Dry Season</label>
+              <input class="checkbox" type="checkbox" id="dry" name="dry-season" />
+            </div>
+            <div class="check-item">
+              <label for="wet">Wet (Rainy)</label>
+              <input class="checkbox" type="checkbox" id="wet" name="wet-season" />
+            </div>
+            <div class="check-item">
+              <label for="harmattan">Harmattan</label>
+              <input class="checkbox" type="checkbox" id="harmattan" name="harmattan-season" />
+            </div>
           </div>
 
         </div>
@@ -159,12 +163,12 @@
             </div>
 
             <div class="radio-item">
-              <label for="bachelor">Bachelor's Degree</label>
+              <label for="bachelor">Bachelor's</label>
               <input class="radio" type="radio" id="bachelor" name="education" value="bachelor" />
             </div>
 
             <div class="radio-item">
-              <label for="master">Master's Degree</label>
+              <label for="master">Master's</label>
               <input class="radio" type="radio" id="master" name="education" value="master" />
             </div>
 
@@ -179,20 +183,9 @@
             </div>
           </div>
 
-          <div class="check-group">
-            <p>Select Your Favorite Seasons in Nigeria</p>
-            <div class="check-item">
-              <label for="dry">Dry Season</label>
-              <input class="checkbox" type="checkbox" id="dry" name="dry-season" />
-            </div>
-            <div class="check-item">
-              <label for="wet">Wet (Rainy)</label>
-              <input class="checkbox" type="checkbox" id="wet" name="wet-season" />
-            </div>
-            <div class="check-item">
-              <label for="harmattan">Harmattan</label>
-              <input class="checkbox" type="checkbox" id="harmattan" name="harmattan-season" />
-            </div>
+          <div class="phone-number">
+            <label for="phone-number">Phone Number<span>*</span></label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Tel" />
           </div>
 
           <div class="bio">
@@ -207,27 +200,35 @@
           </div>
 
           <div class="resume">
-            <label for="resume">Resume<span> ~ Max: 2MB</span></label>
+            <label for="resume">CV / Resume<span> ~ Max: 2MB</span></label>
             <input type="file" name="resume" id="resume" />
             <p id="file-error">File size exceeds 2MB limit!</p>
           </div>
 
           <div class="color">
-            <label for="color">What's your favorite color?<span> ~ We'll use it to personalize your
+            <label for="color">What's your favorite colour?<span> ~ We'll use it to personalize your
                 experience</span></label>
             <input type="color" id="color" name="color" value="#ffffff" />
           </div>
+
+          <div id="terms-group" class="check-group">
+            <label class="terms-label">I agree to the Terms and Conditions<span>*</span></label>
+            <input class="checkbox" type="checkbox" id="terms-Checkbox">
+            <div id="terms_error-message" class="hide_terms-error" >Please accept the terms and conditions.
+            </div>
+          </div>
+
         </div>
       </div>
 
       <div class="button-container">
-        <button class="reset" type="reset">Reset</button>
+        <button  id="reset-button" class="reset" type="reset"  onclick="resetForm()">Reset</button>
         <button class="submit" type="submit">Sign up</button>
       </div>
       <p class="login">Already have an account?<a href="login.html">Login</a></p>
     </form>
   </div>
-  <p class="copyright">Copyright &copy; 2024 Anthony Chidiebere Udem.   All Rights Reserved.</p>
+  <p class="copyright">Copyright &copy; 2024 Anthony Chidiebere Udem. All Rights Reserved.</p>
 
 </body>
 
